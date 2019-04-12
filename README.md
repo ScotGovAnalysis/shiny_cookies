@@ -7,6 +7,7 @@
 - Motivation
 - Google Analytics uses cookies
 - The example focusses on Google Analytics
+- This is not legal advice - only a practical guide to getting people’s consent to store a cookie on their device
 
 ## The law
 A number of laws regulate how data can and cannot be used.
