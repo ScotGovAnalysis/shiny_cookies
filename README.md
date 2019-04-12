@@ -32,3 +32,4 @@ This guide explains how to set up a cookie tool in a Shiny app to comply with th
 
 #### Step 1 - [build a Shiny app](https://shiny.rstudio.com/tutorial/)
 #### Step 2 - [add Google Analytics to the Shiny app](https://shiny.rstudio.com/articles/google-analytics.html)
+This may also be useful: https://shiny.rstudio.com/articles/usage-metrics.html

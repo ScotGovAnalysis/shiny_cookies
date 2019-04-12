@@ -12,6 +12,8 @@ library(shiny)
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(
   
+  tags$head(includeScript("google-analytics.js")),
+  
   # Application title
   titlePanel("Old Faithful Geyser Data"),
   
