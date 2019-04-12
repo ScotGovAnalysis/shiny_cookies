@@ -14,6 +14,11 @@ shinyUI(fluidPage(
   
   tags$head(includeScript("google-analytics.js")),
   
+  tags$body(
+    HTML("<script src='https://cc.cdn.civiccomputing.com/8/cookieControl-8.x.min.js'></script>"),
+    tags$script(src = "cookie_control_config.js")
+  ),
+  
   # Application title
   titlePanel("Old Faithful Geyser Data"),
   
