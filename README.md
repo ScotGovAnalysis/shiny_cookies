@@ -32,13 +32,13 @@ This guide explains one approach to implementing the third rule on cookies in a 
 1. [build a Shiny app](https://shiny.rstudio.com/tutorial/)
 1. [add Google Analytics](https://shiny.rstudio.com/articles/usage-metrics.html)
 1. [add Cookie Control](https://www.civicuk.com/cookie-control/)
-    a. [set up an account](https://www.civicuk.com/cookie-control/v8/download) and specify the URL your app will be deployed to.
-    a. create a `www` folder within your Shiny app directory
-    a. save your Cookie Control configuration in a `.js` file in `www`. It should look something like [this](https://github.com/jsphdms/shiny_cookies/blob/master/www/cookie_control_config.js). Remember to update with your API key, product edition, and GA tracking id.
-    a. Add both the Cookie Control module and your own configuration to ui.R. It should look something like [this](https://github.com/jsphdms/shiny_cookies/blob/master/ui.R).
-    a. Deploy the app. Cookie Control won't work until it's deployed at the URL you specified in your online account.
-    a. Confirm Cookie Control is behaving correctly. You can do this by toggling the relevant option in Cookie Control and seeing the cookies appear/dissappear on your device (in MS Edge press F12 -> Debugger -> expand Cookies). Or if you're using GA you should see a change in the number of active users in your Real-Time report.
-    a. Adjust the default behaviour and appearance of Cookie Control using the [configuration options](https://www.civicuk.com/cookie-control/v8/documentation).
+    * [set up an account](https://www.civicuk.com/cookie-control/v8/download) and specify the URL your app will be deployed to.
+    * create a `www` folder within your Shiny app directory
+    * save your Cookie Control configuration in a `.js` file in `www`. It should look something like [this](https://github.com/jsphdms/shiny_cookies/blob/master/www/cookie_control_config.js). Remember to update with your API key, product edition, and GA tracking id.
+    * Add both the Cookie Control module and your own configuration to ui.R. It should look something like [this](https://github.com/jsphdms/shiny_cookies/blob/master/ui.R).
+    * Deploy the app. Cookie Control won't work until it's deployed at the URL you specified in your online account.
+    * Confirm Cookie Control is behaving correctly. You can do this by toggling the relevant option in Cookie Control and seeing the cookies appear/dissappear on your device (in MS Edge press F12 -> Debugger -> expand Cookies). Or if you're using GA you should see a change in the number of active users in your Real-Time report.
+    * Adjust the default behaviour and appearance of Cookie Control using the [configuration options](https://www.civicuk.com/cookie-control/v8/documentation).
 
 ## Troubleshooting
 
