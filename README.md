@@ -6,7 +6,7 @@
 
 Google Analytics (GA) is commonly used with Shiny apps to measure user-interactions. Since GA uses cookies to  "remember" what a user has done, it is important to comply with relevant legislation when using this technology.
 
-This guide explains how to set up a cookie tool ([Cookie Control](https://www.civicuk.com/cookie-control/)) in your Shiny app so users can control whether cookies are stored on their device. It includes an example Shiny app that uses GA. The general idea should work for other 3rd party tools such as [Mouseflow](https://mouseflow.com/).
+This guide explains how to set up a cookie tool ([Cookie Control](https://www.civicuk.com/cookie-control/)) in your Shiny app so users can control whether cookies are stored on their device. It includes the source code for [this example Shiny app](https://jsphdms.shinyapps.io/shiny_app_with_cookie_control/) that uses GA. The general idea should work for other 3rd party tools such as [Mouseflow](https://mouseflow.com/).
 
 The important bits are in [ui.R](https://github.com/jsphdms/shiny_cookies/blob/master/ui.R) and the Cookie Control [configuration](https://github.com/jsphdms/shiny_cookies/blob/master/www/cookie_control_config.js). You can see a practical application of this approach in the Scottish Government's [Equality Evidence Finder](https://scotland.shinyapps.io/sg-equality-evidence-finder/).
 
