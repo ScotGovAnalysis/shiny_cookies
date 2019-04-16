@@ -5,6 +5,6 @@ account: jsphdms
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 859913
-bundleId: 2015540
+bundleId: 2015555
 url: https://jsphdms.shinyapps.io/shiny_app_with_cookie_control/
-when: 1555417049.81628
+when: 1555417370.96536
