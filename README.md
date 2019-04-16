@@ -6,27 +6,26 @@
 
 Google Analytics (GA) is commonly used with Shiny apps to measure user-interactions. Since GA uses cookies to  "remember" what a user has done, it is important to comply with relevant legislation when using this technology.
 
-This guide explains how to set up a cookie tool ([Cookie Control](https://www.civicuk.com/cookie-control/)) in your Shiny app so users can control whether cookies are stored on their device. It includes the source code for [this example Shiny app](https://jsphdms.shinyapps.io/shiny_app_with_cookie_control/) that uses GA. The general idea should work for other 3rd party tools such as [Mouseflow](https://mouseflow.com/).
+This guide explains how to set up a cookie tool ([Cookie Control](https://www.civicuk.com/cookie-control/)) in your Shiny app so users can control whether cookies are stored on their device. It includes the source code for [this example Shiny app](https://jsphdms.shinyapps.io/shiny_app_with_cookie_control/) that uses GA. The general idea should work for other 3rd party tools such as [Mouseflow](https://mouseflow.com/) (although I haven't tested this).
 
-The important bits are in [ui.R](https://github.com/jsphdms/shiny_cookies/blob/master/ui.R) and the Cookie Control [configuration](https://github.com/jsphdms/shiny_cookies/blob/master/www/cookie_control_config.js). You can see a practical application of this approach in the Scottish Government's [Equality Evidence Finder](https://scotland.shinyapps.io/sg-equality-evidence-finder/).
+The important bits are in [ui.R](https://github.com/jsphdms/shiny_cookies/blob/master/ui.R) and the Cookie Control [configuration](https://github.com/jsphdms/shiny_cookies/blob/master/www/cookie_control_config.js). You can see a real life application of this approach in the Scottish Government's [Equality Evidence Finder](https://scotland.shinyapps.io/sg-equality-evidence-finder/).
 
 ## Caveats
 - This is not legal advice and I am not an expert in this area of the law or on cookies
-- Following these instructions will not necessarily make your use of cookies compliant with the law
+- Following these instructions will not automatically make your use of cookies compliant with the law. There are other things you must take into account which are explained in the guidance linked below.
 
 ## The law
-A number of laws regulate how data can and cannot be used:
+A number of laws regulate how data can and cannot be used.
 
-[The GDPR](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/key-definitions/what-is-personal-data/) applies to the processing of personal data. This guide assumes one of these apply:
-
-- Your Shiny app is not being used to process personal data
-- Your Shiny app processes personal data in compliance with the GDPR
+[The GDPR](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/key-definitions/what-is-personal-data/) apply to the processing of personal data. This guide does not cover any aspect of the GDPR and assumes your Shiny app either: does not come under the GDPR or is already compliant with it.
 
 [The PECR](https://ico.org.uk/for-organisations/guide-to-pecr/) give people specific privacy rights in relation to electronic communications. There are specific [rules on cookies](https://ico.org.uk/for-organisations/guide-to-pecr/cookies-and-similar-technologies/):
 
 - tell people the cookies are there
 - explain what the cookies are doing and why
 - get the person’s consent to store a cookie on their device
+
+This guide explains one approach to implementing the third rule on cookies in a Shiny app.
 
 ## Steps
 
@@ -41,7 +40,7 @@ A number of laws regulate how data can and cannot be used:
     a. Confirm Cookie Control is behaving correctly. You can do this by toggling the relevant option in Cookie Control and seeing the cookies appear/dissappear on your device (in MS Edge press F12 -> Debugger -> expand Cookies). Or if you're using GA you should see a change in the number of active users in your Real-Time report.
     a. Adjust the default behaviour and appearance of Cookie Control using the [configuration options](https://www.civicuk.com/cookie-control/v8/documentation).
 
-## Gotchas
+## Troubleshooting
 
 #### Cookie Control won't show up when testing locally
 The Community Edition of Cookie Control only works for one URL. This means it won't show up when you test it locally. According to Cookie Control:
