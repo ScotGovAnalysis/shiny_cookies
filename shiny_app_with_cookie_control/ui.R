@@ -1,36 +1,13 @@
-#
-# This is the user-interface definition of a Shiny web application. You can
-# run the application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-# 
-#    http://shiny.rstudio.com/
-#
-
 library(shiny)
 
-# Define UI for application that draws a histogram
 shinyUI(fluidPage(
   
   HTML("<script src='https://cc.cdn.civiccomputing.com/8/cookieControl-8.x.min.js'></script>"),
   tags$script(src = "cookie_control_config.js"),
   
-  # Application title
-  titlePanel("Old Faithful Geyser Data"),
+  titlePanel("How to add Cookie Control to an R Shiny app"),
   
-  # Sidebar with a slider input for number of bins 
-  sidebarLayout(
-    sidebarPanel(
-       sliderInput("bins",
-                   "Number of bins:",
-                   min = 1,
-                   max = 50,
-                   value = 30)
-    ),
-    
-    # Show a plot of the generated distribution
-    mainPanel(
-       plotOutput("distPlot")
-    )
-  )
+  h5("This is a minimal example of a Shiny app using Cookie Control (look at the bottom right corner of the screen)."),
+  a(href = "https://github.com/jsphdms/shiny_cookies", "R code and instructions")
+  
 ))
