@@ -1,5 +1,5 @@
 var config = {
-    apiKey: 'e0a8ee0d2db0bb5f49250699b60838a78654ca2a',
+    apiKey: variables.cookie_control_api_key,
     product: 'COMMUNITY',
     text : {
         thirdPartyTitle : 'Warning: Some cookies require your attention',
@@ -16,12 +16,12 @@ var config = {
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', 'UA-138233602-1', { 'anonymize_ip':true });
+                gtag('config', variables.google_analytics_tracking_id, { 'anonymize_ip':true });
                 // End Google Analytics
             },
             onRevoke: function(){
                 // Disable Google Analytics
-                window['ga-disable-UA-138233602-1'] = true;
+                window['ga-disable-'.concat(variables.google_analytics_tracking_id)] = true;
                 // End Google Analytics
             }
         }
