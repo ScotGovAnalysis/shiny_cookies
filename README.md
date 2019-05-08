@@ -6,9 +6,9 @@
 
 Google Analytics (GA) is commonly used with Shiny apps to measure user-interactions. Since GA uses cookies to  "remember" what a user has done, it is important to comply with relevant legislation when using this technology.
 
-This guide explains how to set up a cookie tool ([Cookie Control](https://www.civicuk.com/cookie-control/)) in your Shiny app so users can control whether cookies are stored on their device. It includes the source code for [this example Shiny app](https://jsphdms.shinyapps.io/shiny_app_with_cookie_control/) that uses GA. The general idea should work for other 3rd party tools such as [Mouseflow](https://mouseflow.com/) (although I haven't tested this).
+This guide explains how to set up a cookie tool ([Cookie Control](https://www.civicuk.com/cookie-control/)) in your Shiny app so users can control whether cookies are stored on their device. It includes the source code for [this example Shiny app](https://scotland.shinyapps.io/shiny_cookies/) that uses GA. The general idea should work for other 3rd party tools such as [Mouseflow](https://mouseflow.com/) (although I haven't tested this).
 
-The important bits are in [ui.R](https://github.com/jsphdms/shiny_cookies/blob/master/ui.R) and the Cookie Control [configuration](https://github.com/jsphdms/shiny_cookies/blob/master/www/cookie_control_config.js). You can see a real life application of this approach in the Scottish Government's [Equality Evidence Finder](https://scotland.shinyapps.io/sg-equality-evidence-finder/).
+The important bits are in [ui.R](https://github.com/DataScienceScotland/shiny_cookies/blob/master/ui.R) and the Cookie Control [configuration](https://github.com/DataScienceScotland/shiny_cookies/blob/master/www/cookie_control_config.js). You can see a real life application of this approach in the Scottish Government's [Equality Evidence Finder](https://scotland.shinyapps.io/sg-equality-evidence-finder/).
 
 ## Caveats
 - This is not legal advice and I am not an expert in this area of the law or on cookies
@@ -34,8 +34,8 @@ This guide explains one approach to implementing the third rule on cookies in a 
 1. [add Cookie Control](https://www.civicuk.com/cookie-control/)
     * [set up an account](https://www.civicuk.com/cookie-control/v8/download) and specify the URL your app will be deployed to.
     * create a `www` folder within your Shiny app directory
-    * save your Cookie Control configuration in a `.js` file in `www`. It should look something like [this](https://github.com/jsphdms/shiny_cookies/blob/master/www/cookie_control_config.js). Remember to update with your API key, product edition, and GA tracking id.
-    * Add both the Cookie Control module and your own configuration to ui.R. It should look something like [this](https://github.com/jsphdms/shiny_cookies/blob/master/ui.R).
+    * save your Cookie Control configuration in a `.js` file in `www`. It should look something like [this](https://github.com/DataScienceScotland/shiny_cookies/blob/master/www/cookie_control_config.js). Remember to update with your API key, product edition, and GA tracking id.
+    * Add both the Cookie Control module and your own configuration to ui.R. It should look something like [this](https://github.com/DataScienceScotland/shiny_cookies/blob/master/ui.R).
     * Deploy the app. Cookie Control won't work until it's deployed at the URL you specified in your online account.
     * Confirm Cookie Control is behaving correctly. You can do this by toggling the relevant option in Cookie Control and seeing the cookies appear/dissappear on your device (in MS Edge press F12 -> Debugger -> expand Cookies). Or if you're using GA you should see a change in the number of active users in your Real-Time report.
     * Adjust the default behaviour and appearance of Cookie Control using the [configuration options](https://www.civicuk.com/cookie-control/v8/documentation).
