@@ -3,6 +3,7 @@ library(shiny)
 shinyUI(fluidPage(
   
   HTML("<script src='https://cc.cdn.civiccomputing.com/8/cookieControl-8.x.min.js'></script>"),
+  HTML("<script async src='https://www.googletagmanager.com/gtag/js?id=UA-138233602-1'></script>"),
   tags$script(src = "cookie_control_config.js"),
   
   titlePanel("How to add Cookie Control to an R Shiny app"),
