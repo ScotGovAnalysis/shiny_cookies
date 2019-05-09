@@ -9,6 +9,6 @@ shinyUI(fluidPage(
   titlePanel("How to add Cookie Control to an R Shiny app"),
   
   h5("This is a minimal example of a Shiny app using Cookie Control (look at the bottom right corner of the screen)."),
-  a(href = "https://github.com/jsphdms/shiny_cookies", "R code and instructions")
+  a(href = "https://github.com/DataScienceScotland/shiny_cookies", "R code and instructions")
   
 ))
