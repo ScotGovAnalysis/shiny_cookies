@@ -1,5 +1,5 @@
 var config = {
-    apiKey: 'e0a8ee0d2db0bb5f49250699b60838a78654ca2a',
+    apiKey: '2041dd1ec9de6cf9feabcaef5d4f484bdcdaaa5c',
     product: 'COMMUNITY',
     text : {
         thirdPartyTitle : 'Warning: Some cookies require your attention',
