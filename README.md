@@ -54,3 +54,6 @@ If your browser is configured to block cookies you probably won't be able to con
 
 #### The GA Real-Time report can take a few minutes to update
 GA can take a few minutes to update the number of active users in your Real-Time report. This can be a little confusing if you're expecting to see a change. Try waiting a few minutes between toggling options in Cookie Control. It might help to only test one device at a time to keep things simple.
+
+## Licence
+This repository is available under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
